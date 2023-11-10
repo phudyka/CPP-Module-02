@@ -6,7 +6,7 @@
 #    By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/23 11:49:28 by phudyka           #+#    #+#              #
-#    Updated: 2023/11/07 16:27:20 by phudyka          ###   ########.fr        #
+#    Updated: 2023/11/10 10:30:58 by phudyka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ TARGET = Mon_premier_canon
 
 CXX = c++
 
-CXXFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp Fixed.cpp	\
 
@@ -28,7 +28,7 @@ $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -std=c++98 -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
